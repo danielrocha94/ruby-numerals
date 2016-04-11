@@ -1,4 +1,4 @@
-== Digital Natives
+# Digital Natives
 
 This is my attempt to solve the ruby-numerals Exercise.
 
