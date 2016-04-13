@@ -7,12 +7,12 @@ class Numerals
   # preffixes used in the tenths
   preffix = ["","","twen", "thir", "for", "fif"]
   # An array with the numbers from 1 to 19
-  first_numbers = ["zero", "one", "two", "three", "four", "five", "six",
+  first_numbers = ["", "one", "two", "three", "four", "five", "six",
                    "seven", "eight", "nine", "ten", "eleven", "twelve",
                    "thirtenen", "fourteen", "fifteen", "sixteen",
                     "seventeen", "eighteen", "nineteen"]
   suffix = ["ty", "hundred", "thousand,", "million"]
-    if num > 0
+    if num >= 0
       case num
         when 0..9
           # keeps the former value of result in case the method is called with
@@ -46,8 +46,9 @@ class Numerals
           if digit.between?(19, 999)
             #Calculates the name of the first digits (thousands)
             number_words(digit)
-          elsif digit.between?(1000, 999999)
+          elsif digit.between?(1000, 9999999)
             millions = digit/1000
+            # drop last three digits and calculate value recursively
             digit = digit.to_s.split('').drop(digit.to_s.length - 3).join.to_i
             @result = "#{@result} #{first_numbers[millions]} #{suffix[3]} "
             number_words(digit)
@@ -57,7 +58,7 @@ class Numerals
             number_words(num)
           end
         else
-          @result = "Please pick a smaller number."
+          @result = "Please pick a smaller number..."
       end
     end
   end
