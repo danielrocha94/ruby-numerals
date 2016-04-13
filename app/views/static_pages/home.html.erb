@@ -1,2 +1,23 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<header>
+  <h1>Ruby Numerals</h1>
+</header>
+<body>
+  <p> Instructions: just start typing a number in the box below and see how the words appear!</p>
+  <div class="output">
+    <h2>Start by typing in the box and then click submit</h2>
+    <%= @output %>
+  </div>
+  <section>
+    <form>
+      <div class="field">
+        <%= form_tag('/submit') do %>
+          <div>
+            <%= text_field_tag "input" %>
+          </div>
+          <%= submit_tag 'Submit' %>
+        <% end %>
+      </div>
+    </form>
+  </section>
+</body>
+
