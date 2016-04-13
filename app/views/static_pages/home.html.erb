@@ -1,23 +1,30 @@
-<header>
+<header class="navbar navbar-default">
   <h1>Ruby Numerals</h1>
 </header>
 <body>
-  <p> Instructions: just start typing a number in the box below and see how the words appear!</p>
+  <div class="container">
+   <li> <h2> Welcome to the 'Ruby Numerals', note: the biggest possible number is 999,999,999!</h2> </li>
+   <li> <h2> Start by typing in the box and then click submit</h2></li>
+  </div>
   <div class="output">
-    <h2>Start by typing in the box and then click submit</h2>
     <%= @output %>
   </div>
-  <section>
+  <section class="jumbotron">
     <form>
       <div class="field">
         <%= form_tag('/submit') do %>
-          <div>
+          <div class="buttonHolder">
             <%= text_field_tag "input" %>
           </div>
-          <%= submit_tag 'Submit' %>
+          <%= submit_tag 'Submit', class: "btn btn-primary center-block" %>
         <% end %>
       </div>
     </form>
+    <footer class="footer">
+      <small>
+        by Daniel Rocha
+      </small>
+    </footer>
   </section>
 </body>
 

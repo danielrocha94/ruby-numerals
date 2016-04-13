@@ -1,0 +1,113 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+body {
+  padding-top: 60px
+}
+
+section {
+  overflow: auto;
+}
+
+textarea{
+  resize: vertical;
+}
+
+.center{
+  text-align: center;
+}
+
+.center h1{
+  margin-bottom: 10px;
+}
+
+/* typography */
+
+h2, h3, h4, h5, h6 {
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 5%;
+  font-size: 1.5em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: left;
+  font-weight: normal;
+  color: #777;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+.output {
+  text-align: center;
+  margin-bottom: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 3em;
+}
+
+.jumbotron {
+  margin-bottom: 0px;
+  border: 1px solid #bbb;
+}
+
+
+/* forms */
+
+.buttonHolder{
+  text-align: center;
+}
+
+input {
+  border: 1px solid #bbb;
+  width: 85%;
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 35px;
+  padding: 5px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+.btn {
+  margin-bottom: 15%;
+  font-size: 1.5em;
+  width: 75%;
+  border: 1px solid #000;
+  @include box_sizing;
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+  small{
+    float: right;
+  }
+}
